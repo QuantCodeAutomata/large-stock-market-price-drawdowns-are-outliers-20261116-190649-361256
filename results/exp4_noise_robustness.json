@@ -1,0 +1,92 @@
+{
+  "DJIA": {
+    "label": "Dow Jones Industrial Average",
+    "n_obs": 2148,
+    "counts": {
+      "0.0": {
+        "n_drawdowns": 543,
+        "n_drawups": 544,
+        "max_drawdown_pct": 12.363405672806596,
+        "max_drawup_pct": 8.35123139813929
+      },
+      "0.5": {
+        "n_drawdowns": 521,
+        "n_drawups": 522,
+        "max_drawdown_pct": 12.197059370190969,
+        "max_drawup_pct": 8.771113730286224
+      },
+      "1.0": {
+        "n_drawdowns": 534,
+        "n_drawups": 535,
+        "max_drawdown_pct": 11.744280854085233,
+        "max_drawup_pct": 11.052776002623041
+      },
+      "2.0": {
+        "n_drawdowns": 519,
+        "n_drawups": 520,
+        "max_drawdown_pct": 14.564388808435636,
+        "max_drawup_pct": 18.7532504425404
+      }
+    }
+  },
+  "SP500": {
+    "label": "S&P 500",
+    "n_obs": 14978,
+    "counts": {
+      "0.0": {
+        "n_drawdowns": 3300,
+        "n_drawups": 3300,
+        "max_drawdown_pct": 28.51328876012485,
+        "max_drawup_pct": 14.917278549728206
+      },
+      "0.5": {
+        "n_drawdowns": 3409,
+        "n_drawups": 3409,
+        "max_drawdown_pct": 28.478103763542606,
+        "max_drawup_pct": 17.362356256676122
+      },
+      "1.0": {
+        "n_drawdowns": 3534,
+        "n_drawups": 3535,
+        "max_drawdown_pct": 29.11521469266354,
+        "max_drawup_pct": 20.440229013965876
+      },
+      "2.0": {
+        "n_drawdowns": 3678,
+        "n_drawups": 3678,
+        "max_drawdown_pct": 26.91283325790501,
+        "max_drawup_pct": 21.352619015005978
+      }
+    }
+  },
+  "NASDAQ": {
+    "label": "Nasdaq Composite",
+    "n_obs": 7430,
+    "counts": {
+      "0.0": {
+        "n_drawdowns": 1477,
+        "n_drawups": 1478,
+        "max_drawdown_pct": 25.304683665098892,
+        "max_drawup_pct": 15.952323316289363
+      },
+      "0.5": {
+        "n_drawdowns": 1572,
+        "n_drawups": 1573,
+        "max_drawdown_pct": 27.530474426805533,
+        "max_drawup_pct": 23.357628916466055
+      },
+      "1.0": {
+        "n_drawdowns": 1681,
+        "n_drawups": 1682,
+        "max_drawdown_pct": 26.842625857340323,
+        "max_drawup_pct": 15.918114697333023
+      },
+      "2.0": {
+        "n_drawdowns": 1811,
+        "n_drawups": 1812,
+        "max_drawdown_pct": 25.458336067557894,
+        "max_drawup_pct": 20.363973335922054
+      }
+    }
+  }
+}
