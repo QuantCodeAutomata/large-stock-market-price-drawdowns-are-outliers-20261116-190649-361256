@@ -108,4 +108,10 @@ SURROGATE_THRESHOLDS_PAPER = {
     "DJIA": 18.0, "SP500": 10.0, "NASDAQ": 14.0, "TSE300": 10.0, "AORD": 14.0,
     "STI": 29.0, "HSI": 23.0, "N225": 14.0, "FTSE100": 23.0, "DAX": 13.0,
     "CHF": 9.0, "JPY": 12.0,
+    # Table 7 company thresholds explicitly reported in the paper text.
+    "MSFT": 30.0, "WMT": 22.0,
 }
+# For every other instrument (CAC40, MIBTel, GBP/US$, and companies not
+# listed above) Table 6/7 gives no numeric threshold, so the crossover is
+# located automatically from the error-plot rule in _auto_threshold below,
+# applying the same bulk/outlier criterion the paper uses visually.

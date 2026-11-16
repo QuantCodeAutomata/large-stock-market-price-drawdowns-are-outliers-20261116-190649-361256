@@ -1,0 +1,490 @@
+{
+  "indices": {
+    "DJIA": {
+      "label": "Dow Jones Industrial Average",
+      "n_obs": 2148,
+      "threshold_pct": 18.0,
+      "auto_detected_threshold_pct": 8.0,
+      "real_count_above_threshold": 0,
+      "surrogate_count_histogram": {
+        "0": 1000
+      },
+      "surrogate_mean": 0.0,
+      "confidence_level": 0.0
+    },
+    "SP500": {
+      "label": "S&P 500",
+      "n_obs": 14978,
+      "threshold_pct": 10.0,
+      "auto_detected_threshold_pct": 11.0,
+      "real_count_above_threshold": 7,
+      "surrogate_count_histogram": {
+        "1": 127,
+        "2": 374,
+        "3": 304,
+        "4": 142,
+        "5": 43,
+        "6": 7,
+        "7": 3
+      },
+      "surrogate_mean": 2.633,
+      "confidence_level": 0.997
+    },
+    "NASDAQ": {
+      "label": "Nasdaq Composite",
+      "n_obs": 7430,
+      "threshold_pct": 14.0,
+      "auto_detected_threshold_pct": 14.0,
+      "real_count_above_threshold": 5,
+      "surrogate_count_histogram": {
+        "0": 810,
+        "1": 174,
+        "2": 16
+      },
+      "surrogate_mean": 0.206,
+      "confidence_level": 1.0
+    },
+    "TSE300": {
+      "label": "TSE 300 Composite (Toronto)",
+      "n_obs": 5274,
+      "threshold_pct": 10.0,
+      "auto_detected_threshold_pct": null,
+      "real_count_above_threshold": 6,
+      "surrogate_count_histogram": {
+        "1": 725,
+        "2": 225,
+        "3": 45,
+        "4": 5
+      },
+      "surrogate_mean": 1.33,
+      "confidence_level": 1.0
+    },
+    "AORD": {
+      "label": "All Ordinaries (Sydney)",
+      "n_obs": 4019,
+      "threshold_pct": 14.0,
+      "auto_detected_threshold_pct": 14.0,
+      "real_count_above_threshold": 3,
+      "surrogate_count_histogram": {
+        "0": 13,
+        "1": 952,
+        "2": 35
+      },
+      "surrogate_mean": 1.022,
+      "confidence_level": 1.0
+    },
+    "STI": {
+      "label": "Straits Times (Singapore)",
+      "n_obs": 3112,
+      "threshold_pct": 29.0,
+      "auto_detected_threshold_pct": null,
+      "real_count_above_threshold": 1,
+      "surrogate_count_histogram": {
+        "0": 1000
+      },
+      "surrogate_mean": 0.0,
+      "confidence_level": 1.0
+    },
+    "HSI": {
+      "label": "Hang Seng (Hong Kong)",
+      "n_obs": 3342,
+      "threshold_pct": 23.0,
+      "auto_detected_threshold_pct": 16.0,
+      "real_count_above_threshold": 4,
+      "surrogate_count_histogram": {
+        "1": 579,
+        "2": 408,
+        "3": 13
+      },
+      "surrogate_mean": 1.434,
+      "confidence_level": 1.0
+    },
+    "N225": {
+      "label": "Nikkei 225 (Tokyo)",
+      "n_obs": 6786,
+      "threshold_pct": 14.0,
+      "auto_detected_threshold_pct": 12.0,
+      "real_count_above_threshold": 4,
+      "surrogate_count_histogram": {
+        "1": 869,
+        "2": 125,
+        "3": 6
+      },
+      "surrogate_mean": 1.137,
+      "confidence_level": 1.0
+    },
+    "FTSE100": {
+      "label": "FTSE 100 (London)",
+      "n_obs": 4103,
+      "threshold_pct": 23.0,
+      "auto_detected_threshold_pct": 13.0,
+      "real_count_above_threshold": 1,
+      "surrogate_count_histogram": {
+        "0": 1000
+      },
+      "surrogate_mean": 0.0,
+      "confidence_level": 1.0
+    },
+    "CAC40": {
+      "label": "CAC40 (Paris)",
+      "n_obs": 2582,
+      "error": "no outlier crossover detected"
+    },
+    "DAX": {
+      "label": "DAX (Frankfurt)",
+      "n_obs": 3135,
+      "threshold_pct": 13.0,
+      "auto_detected_threshold_pct": 11.0,
+      "real_count_above_threshold": 3,
+      "surrogate_count_histogram": {
+        "1": 773,
+        "2": 196,
+        "3": 29,
+        "4": 2
+      },
+      "surrogate_mean": 1.26,
+      "confidence_level": 0.969
+    },
+    "MIBTEL": {
+      "label": "MIBTel (Milan, successor FTSE MIB series)",
+      "n_obs": 280,
+      "error": "no outlier crossover detected"
+    }
+  },
+  "currencies": {
+    "CHF": {
+      "label": "US$/CHF (Swiss Franc)",
+      "n_obs": 7125,
+      "threshold_pct": 9.0,
+      "auto_detected_threshold_pct": 5.0,
+      "real_count_above_threshold": 3,
+      "surrogate_count_histogram": {
+        "0": 785,
+        "1": 196,
+        "2": 18,
+        "3": 1
+      },
+      "surrogate_mean": 0.235,
+      "confidence_level": 0.999
+    },
+    "JPY": {
+      "label": "US$/Yen",
+      "n_obs": 6879,
+      "threshold_pct": 12.0,
+      "auto_detected_threshold_pct": 7.0,
+      "real_count_above_threshold": 3,
+      "surrogate_count_histogram": {
+        "0": 995,
+        "1": 5
+      },
+      "surrogate_mean": 0.005,
+      "confidence_level": 1.0
+    },
+    "GBPUSD": {
+      "label": "GBP/US$",
+      "n_obs": 7125,
+      "error": "no outlier crossover detected"
+    }
+  },
+  "companies": {
+    "MSFT": {
+      "label": "Microsoft",
+      "n_obs": 3616,
+      "threshold_pct": 30.0,
+      "auto_detected_threshold_pct": 30.0,
+      "real_count_above_threshold": 2,
+      "surrogate_count_histogram": {
+        "1": 962,
+        "2": 38
+      },
+      "surrogate_mean": 1.038,
+      "confidence_level": 0.962
+    },
+    "CSCO": {
+      "label": "Cisco",
+      "n_obs": 2613,
+      "threshold_pct": 21.0,
+      "auto_detected_threshold_pct": 21.0,
+      "real_count_above_threshold": 4,
+      "surrogate_count_histogram": {
+        "0": 95,
+        "1": 257,
+        "2": 317,
+        "3": 219,
+        "4": 90,
+        "5": 15,
+        "6": 6,
+        "7": 1
+      },
+      "surrogate_mean": 2.026,
+      "confidence_level": 0.888
+    },
+    "GE": {
+      "label": "General Electric",
+      "n_obs": 7708,
+      "threshold_pct": 14.0,
+      "auto_detected_threshold_pct": 14.0,
+      "real_count_above_threshold": 5,
+      "surrogate_count_histogram": {
+        "0": 62,
+        "1": 239,
+        "2": 341,
+        "3": 216,
+        "4": 99,
+        "5": 30,
+        "6": 11,
+        "7": 1,
+        "8": 1
+      },
+      "surrogate_mean": 2.196,
+      "confidence_level": 0.957
+    },
+    "INTC": {
+      "label": "Intel",
+      "n_obs": 3561,
+      "threshold_pct": 33.0,
+      "auto_detected_threshold_pct": 33.0,
+      "real_count_above_threshold": 2,
+      "surrogate_count_histogram": {
+        "0": 966,
+        "1": 34
+      },
+      "surrogate_mean": 0.034,
+      "confidence_level": 1.0
+    },
+    "XOM": {
+      "label": "Exxon-Mobil",
+      "n_obs": 7708,
+      "threshold_pct": 18.0,
+      "auto_detected_threshold_pct": 18.0,
+      "real_count_above_threshold": 2,
+      "surrogate_count_histogram": {
+        "0": 92,
+        "1": 883,
+        "2": 25
+      },
+      "surrogate_mean": 0.933,
+      "confidence_level": 0.975
+    },
+    "WMT": {
+      "label": "Wall Mart",
+      "n_obs": 7031,
+      "threshold_pct": 17.0,
+      "auto_detected_threshold_pct": 17.0,
+      "real_count_above_threshold": 12,
+      "surrogate_count_histogram": {
+        "0": 8,
+        "1": 24,
+        "2": 67,
+        "3": 114,
+        "4": 171,
+        "5": 221,
+        "6": 160,
+        "7": 126,
+        "8": 66,
+        "9": 27,
+        "10": 12,
+        "11": 4
+      },
+      "surrogate_mean": 5.066,
+      "confidence_level": 1.0
+    },
+    "IBM": {
+      "label": "IBM",
+      "n_obs": 7708,
+      "threshold_pct": 16.0,
+      "auto_detected_threshold_pct": 16.0,
+      "real_count_above_threshold": 3,
+      "surrogate_count_histogram": {
+        "0": 35,
+        "1": 199,
+        "2": 392,
+        "3": 234,
+        "4": 96,
+        "5": 34,
+        "6": 10
+      },
+      "surrogate_mean": 2.299,
+      "confidence_level": 0.626
+    },
+    "T": {
+      "label": "AT&T",
+      "n_obs": 4198,
+      "error": "no outlier crossover detected"
+    },
+    "C": {
+      "label": "Citigroup",
+      "n_obs": 5939,
+      "threshold_pct": 21.0,
+      "auto_detected_threshold_pct": 21.0,
+      "real_count_above_threshold": 5,
+      "surrogate_count_histogram": {
+        "1": 1,
+        "2": 746,
+        "3": 214,
+        "4": 34,
+        "5": 5
+      },
+      "surrogate_mean": 2.296,
+      "confidence_level": 0.995
+    },
+    "TXN": {
+      "label": "Texas Instruments",
+      "n_obs": 4676,
+      "threshold_pct": 36.0,
+      "auto_detected_threshold_pct": 36.0,
+      "real_count_above_threshold": 2,
+      "surrogate_count_histogram": {
+        "0": 928,
+        "1": 71,
+        "2": 1
+      },
+      "surrogate_mean": 0.073,
+      "confidence_level": 0.999
+    },
+    "HPQ": {
+      "label": "Hewlett Packard",
+      "n_obs": 5939,
+      "threshold_pct": 17.0,
+      "auto_detected_threshold_pct": 17.0,
+      "real_count_above_threshold": 7,
+      "surrogate_count_histogram": {
+        "0": 43,
+        "2": 19,
+        "3": 73,
+        "4": 147,
+        "5": 214,
+        "6": 175,
+        "7": 163,
+        "8": 87,
+        "9": 49,
+        "10": 19,
+        "11": 10,
+        "12": 1
+      },
+      "surrogate_mean": 5.555,
+      "confidence_level": 0.671
+    },
+    "MRK": {
+      "label": "Merck",
+      "n_obs": 7708,
+      "threshold_pct": 15.0,
+      "auto_detected_threshold_pct": 15.0,
+      "real_count_above_threshold": 4,
+      "surrogate_count_histogram": {
+        "0": 249,
+        "1": 351,
+        "2": 232,
+        "3": 121,
+        "4": 37,
+        "5": 9,
+        "6": 1
+      },
+      "surrogate_mean": 1.377,
+      "confidence_level": 0.953
+    },
+    "PFE": {
+      "label": "Pfizer",
+      "n_obs": 4676,
+      "threshold_pct": 13.0,
+      "auto_detected_threshold_pct": 13.0,
+      "real_count_above_threshold": 8,
+      "surrogate_count_histogram": {
+        "0": 59,
+        "1": 1,
+        "2": 25,
+        "3": 74,
+        "4": 125,
+        "5": 189,
+        "6": 198,
+        "7": 147,
+        "8": 87,
+        "9": 64,
+        "10": 21,
+        "11": 6,
+        "12": 4
+      },
+      "surrogate_mean": 5.531,
+      "confidence_level": 0.818
+    },
+    "KO": {
+      "label": "Coca Cola",
+      "n_obs": 7708,
+      "threshold_pct": 18.0,
+      "auto_detected_threshold_pct": 18.0,
+      "real_count_above_threshold": 3,
+      "surrogate_count_histogram": {
+        "0": 73,
+        "1": 626,
+        "2": 249,
+        "3": 44,
+        "4": 8
+      },
+      "surrogate_mean": 1.288,
+      "confidence_level": 0.948
+    },
+    "QCOM": {
+      "label": "Qualcomm",
+      "n_obs": 2148,
+      "error": "no outlier crossover detected"
+    },
+    "AMAT": {
+      "label": "Applied Materials",
+      "n_obs": 3917,
+      "error": "no outlier crossover detected"
+    },
+    "PG": {
+      "label": "Procter & Gamble",
+      "n_obs": 7708,
+      "threshold_pct": 37.0,
+      "auto_detected_threshold_pct": 37.0,
+      "real_count_above_threshold": 2,
+      "surrogate_count_histogram": {
+        "0": 986,
+        "1": 14
+      },
+      "surrogate_mean": 0.014,
+      "confidence_level": 1.0
+    },
+    "GM": {
+      "label": "General Motors",
+      "error": "No bars for ticker GM in the loaded batch"
+    },
+    "MDT": {
+      "label": "Medtronic",
+      "n_obs": 4676,
+      "threshold_pct": 18.0,
+      "auto_detected_threshold_pct": 18.0,
+      "real_count_above_threshold": 5,
+      "surrogate_count_histogram": {
+        "0": 192,
+        "1": 397,
+        "2": 254,
+        "3": 123,
+        "4": 28,
+        "5": 6
+      },
+      "surrogate_mean": 1.416,
+      "confidence_level": 0.994
+    },
+    "F": {
+      "label": "Ford",
+      "n_obs": 5939,
+      "threshold_pct": 16.0,
+      "auto_detected_threshold_pct": 16.0,
+      "real_count_above_threshold": 4,
+      "surrogate_count_histogram": {
+        "1": 177,
+        "2": 291,
+        "3": 286,
+        "4": 158,
+        "5": 56,
+        "6": 25,
+        "7": 4,
+        "8": 3
+      },
+      "surrogate_mean": 2.731,
+      "confidence_level": 0.754
+    }
+  }
+}
