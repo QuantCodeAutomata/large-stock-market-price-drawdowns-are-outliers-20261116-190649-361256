@@ -121,7 +121,8 @@ def run() -> dict:
 
     company_tickers = [COMPANIES[k][0] for k in SURROGATE_COMPANIES if k in COMPANIES]
     try:
-        bars, _meta = load_company_bars(company_tickers, "1962-01-01", "2000-07-01")
+        bars, _meta = load_company_bars(company_tickers, "1962-01-01", "2000-07-01",
+                                         identity_date="2000-07-01")
     except DataLoaderError as exc:
         results["companies"] = {"error": str(exc)}
         bars = None

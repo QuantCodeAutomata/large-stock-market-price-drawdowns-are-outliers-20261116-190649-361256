@@ -63,7 +63,8 @@ def _has_outlier(amplitudes: np.ndarray, fit) -> bool | None:
 def run() -> dict:
     tickers = [symbol for symbol, _, _, _ in COMPANIES.values()]
     try:
-        bars, meta = load_company_bars(tickers, "1962-01-01", "2000-07-01")
+        bars, meta = load_company_bars(tickers, "1962-01-01", "2000-07-01",
+                                        identity_date="2000-07-01")
     except DataLoaderError as exc:
         print(f"FAILED to load company bars: {exc}")
         RESULTS_DIR.mkdir(parents=True, exist_ok=True)

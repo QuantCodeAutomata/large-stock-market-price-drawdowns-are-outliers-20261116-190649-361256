@@ -214,8 +214,16 @@ def _load_batch(request: dict, batch: int) -> tuple[pd.DataFrame, list[dict]]:
 
 
 def load_company_bars(tickers: list[str], start_date: str, end_date: str,
-                       use_cache: bool = True) -> tuple[pd.DataFrame, dict]:
+                       use_cache: bool = True,
+                       identity_date: str | None = None) -> tuple[pd.DataFrame, dict]:
     """Daily OHLCV bars for ``tickers`` from the QuantX Dataloader.
+
+    ``identity_date`` fixes the date on which a ticker identifies its intended
+    security (Dataloader default: ``end_date``). It must be set to a date
+    within the sample period for tickers that have since been reused by an
+    unrelated company (e.g. GM, whose symbol was reassigned to the entity
+    created in the 2009 bankruptcy), otherwise the loader follows today's
+    security back in time and returns no bars for the historical period.
 
     Returns rows of timestamp, date, ticker, open, high, low, close, volume,
     and metadata with each ticker's ``ticker_details`` entry, failures, and
@@ -225,6 +233,8 @@ def load_company_bars(tickers: list[str], start_date: str, end_date: str,
         "timeframe": "1d", "start_date": start_date, "end_date": end_date,
         "source": "massive", "adjust_dividends": True, "yahoo_backstop": True,
     }
+    if identity_date:
+        request["identity_date"] = identity_date
     tickers = list(dict.fromkeys(tickers))
     key = hashlib.sha256(json.dumps({**request, "tickers": sorted(tickers)}, sort_keys=True).encode()).hexdigest()[:16]
     bars_path, meta_path = CACHE_DIR / f"{key}.csv.gz", CACHE_DIR / f"{key}.json"

@@ -36,6 +36,20 @@ def test_single_drawdown_run():
     assert drawups[0] == pytest.approx((85.0 - 80.0) / 80.0 * 100.0)
 
 
+def test_identify_runs_handles_leading_zero_return():
+    # First return is exactly 0 (flat open day); ZERO_RETURN_BREAKS_RUN=False
+    # means `_run_signs` leaves `signs[0] == 0`. `current_sign` must not get
+    # stuck there and suppress every later run (regression: AMAT/MDT, whose
+    # first cached daily return is exactly zero, produced 0 runs before the
+    # fix to `identify_runs`).
+    prices = pd.Series([10.0, 10.0, 9.0, 8.0, 9.0])
+    drawdowns, drawups = compute_drawdowns_drawups(prices)
+    assert len(drawdowns) == 1
+    assert drawdowns[0] == pytest.approx(20.0)  # (10-8)/10*100
+    assert len(drawups) == 1
+    assert drawups[0] == pytest.approx((9.0 - 8.0) / 8.0 * 100.0)
+
+
 def test_drawdown_amplitudes_are_nonnegative():
     rng = np.random.default_rng(0)
     prices = pd.Series(100.0 * np.exp(np.cumsum(rng.normal(0, 0.01, 2000))))

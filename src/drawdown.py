@@ -63,13 +63,23 @@ def identify_runs(prices: pd.Series) -> pd.DataFrame:
     signs = _run_signs(returns.copy())
     index = prices.index
 
+    # `signs` can only be exactly 0 in a leading stretch before the first
+    # non-zero return (ZERO_RETURN_BREAKS_RUN=False propagates the prevailing
+    # sign onto every later zero, see `_run_signs`). Start the scan at the
+    # first non-zero sign so that `current_sign` is never left stuck at 0,
+    # which would otherwise suppress every run for the rest of the series.
+    nonzero_positions = np.flatnonzero(signs != 0)
+    if len(nonzero_positions) == 0:
+        return pd.DataFrame(columns=["start", "end", "sign", "length", "amplitude_pct"])
+    first_nonzero = int(nonzero_positions[0])
+
     runs = []
     run_start_pos = 0  # position (in `prices`) of the local extremum starting the run
-    current_sign = signs[0]
-    for i in range(1, len(signs) + 1):
-        if i == len(signs) or (signs[i] != current_sign and current_sign != 0):
+    current_sign = signs[first_nonzero]
+    for i in range(first_nonzero + 1, len(signs) + 1):
+        if i == len(signs) or signs[i] != current_sign:
             run_end_pos = i  # position in `prices` of the local extremum ending the run
-            if current_sign != 0 and run_end_pos > run_start_pos:
+            if run_end_pos > run_start_pos:
                 p_start = prices.iloc[run_start_pos]
                 p_end = prices.iloc[run_end_pos]
                 if current_sign < 0:
