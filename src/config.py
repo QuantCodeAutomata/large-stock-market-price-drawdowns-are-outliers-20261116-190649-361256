@@ -51,10 +51,15 @@ CURRENCIES = {
     "CHF": ("DEXSZUS", "1971-01-04", "1999-06-01", "US$/CHF (Swiss Franc)"),
     # FRED DEXJPUS: Japanese Yen to one US Dollar
     "JPY": ("DEXJPUS", "1972-01-04", "1999-06-01", "US$/Yen"),
+    # FRED DEXUSUK: US Dollars to one British Pound (supplementary analysis,
+    # paper Section 3: "we also looked at the GBP/US$ ... exchange rate").
+    "GBPUSD": ("DEXUSUK", "1971-01-04", "1999-06-01", "GBP/US$"),
 }
-# US$/DM (Deutschmark) and Gold could not be retrieved from Dataloader,
-# Massive, FRED or Yahoo Finance for this historical window; see
-# "Not reproduced" in results/RESULTS.md.
+# US$/DM (Deutschmark), Gold, and GBP/DM could not be retrieved as daily
+# series from Dataloader, Massive, FRED or Yahoo Finance for this historical
+# window (FRED only carries DM/US$ as a monthly average, series EXGEUS, and
+# has no gold-fixing series at the documented ids); see "Not reproduced" in
+# results/RESULTS.md.
 
 # Experiment 4: robustness to added noise (paper Section 3.4)
 NOISE_AMPLITUDES = [0.0, 0.5, 1.0, 2.0]   # multiples A of return std dev added as uniform[-1,1]*A*sigma (paper Eq. in Section 3.4)
