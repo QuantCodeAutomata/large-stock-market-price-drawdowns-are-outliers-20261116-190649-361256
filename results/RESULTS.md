@@ -141,7 +141,7 @@ regime is not destroyed by independent noise of amplitude up to 2σ, confirming
 that it reflects temporal structure in returns rather than specific small
 return values.
 
-## Experiment 5 — 29 (here: 21) US companies, normalized distributions
+## Experiment 5 — 29 (here: 20) US companies, normalized distributions
 
 File: `results/exp5_companies.json`, `results/exp5_normalized_collapse.png`,
 `results/exp5_dd_du_regression.png`.
@@ -160,19 +160,19 @@ companies (`results/exp5_companies.json["regression"]`):
 
 | | Paper | Obtained |
 |---|---|---|
-| Slope M1 | 2.0717 | 1.9586 |
-| Intercept M0 | 0.031803 | 0.0425 |
-| R (R²=0.9748 in paper → r≈0.987) | 0.9748 (quoted as R) | r = 0.9637, R² = 0.9287 |
-| Mean drawdowns/year >15% | 0.94 | 0.65 |
-| Mean drawups/year >15% | 1.92 | 1.31 |
+| Slope M1 | 2.0717 | 1.9554 |
+| Intercept M0 | 0.031803 | 0.0464 |
+| R (R²=0.9748 in paper → r≈0.987) | 0.9748 (quoted as R) | r = 0.9683, R² = 0.9376 |
+| Mean drawdowns/year >15% | 0.94 | 0.76 |
+| Mean drawups/year >15% | 1.92 | 1.54 |
 
 Verdict: the slope is within 6% of the paper's value and the correlation is
-strong and of the same sign and order of magnitude (r = 0.96 vs. the paper's
+strong and of the same sign and order of magnitude (r = 0.97 vs. the paper's
 quoted 0.975) → **reproduced** for the qualitative claim that drawup frequency
 scales linearly with drawdown frequency across companies, with a slope near 2;
-the absolute frequencies (0.65 vs 0.94, 1.31 vs 1.92) are **partially
+the absolute frequencies (0.76 vs 0.94, 1.54 vs 1.92) are **partially
 reproduced** (same ordering — drawups about twice as frequent as drawdowns —
-but roughly 30% lower in level, consistent with the smaller surviving universe
+but roughly 20% lower in level, consistent with the smaller surviving universe
 of 20 rather than 29 names).
 
 Normalized distributions (`exp5_normalized_collapse.png`): plotting
@@ -181,10 +181,23 @@ the bulk (|y| ≲ 5) collapsing close to the universal curve exp(-|y|) for all 2
 companies, with the largest events departing upward exactly as in the paper's
 Fig. 22 → **reproduced** (qualitative collapse and departure pattern).
 
-Company classification: 19 of the 20 obtained companies show a clear drawdown
-outlier flag (`drawdown_outlier: true` in `exp5_companies.json`); this is
-consistent with the paper's finding that nearly all companies (27 of 29) show
-drawdown outliers, with only a couple of exceptions.
+Company classification: with the fixed-cutoff rule on the mean relative
+departure of the top 2% of events from the stretched-exponential fit
+(`OUTLIER_RELATIVE_ERROR_CUTOFF` in `exp/exp5.py`), 8 of the 20 obtained
+companies (MSFT, GE, XOM, IBM, C, TXN, KO, PG) are flagged
+`drawdown_outlier: true` and 5 (INTC, XOM, WMT, QCOM, PG) are flagged
+`drawup_outlier: true` in `exp5_companies.json`. The paper classifies
+drawdown outliers in 27 of its 29 companies and drawup outliers as "obvious"
+in 12, "difficult to classify" in 4, and absent in 13, using visual inspection
+of the error plot rather than a fixed numeric cutoff. The fixed cutoff used
+here is more conservative (fewer series cross the `OUTLIER_RELATIVE_ERROR_CUTOFF
+= 1.0` threshold on the mean of the top 2% of events than would be flagged by
+eye), so the fraction of companies classified as having drawdown outliers is
+**partially reproduced**: the direction (most companies show some excess of
+large events in the normalized collapse plot, see below) agrees with the
+paper, but the fixed-cutoff count (8/20 for drawdowns) is materially lower
+than the paper's share (27/29) because of this methodological difference
+between a numeric threshold and visual classification.
 
 ## Experiment 6 — Surrogate-data significance test
 

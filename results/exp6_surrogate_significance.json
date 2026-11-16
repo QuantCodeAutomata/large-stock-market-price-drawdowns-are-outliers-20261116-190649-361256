@@ -66,11 +66,10 @@
       "auto_detected_threshold_pct": 14.0,
       "real_count_above_threshold": 3,
       "surrogate_count_histogram": {
-        "0": 13,
-        "1": 952,
+        "1": 965,
         "2": 35
       },
-      "surrogate_mean": 1.022,
+      "surrogate_mean": 1.035,
       "confidence_level": 1.0
     },
     "STI": {
@@ -159,12 +158,12 @@
       "auto_detected_threshold_pct": 5.0,
       "real_count_above_threshold": 3,
       "surrogate_count_histogram": {
-        "0": 785,
-        "1": 196,
+        "0": 781,
+        "1": 200,
         "2": 18,
         "3": 1
       },
-      "surrogate_mean": 0.235,
+      "surrogate_mean": 0.239,
       "confidence_level": 0.999
     },
     "JPY": {
@@ -226,18 +225,17 @@
       "auto_detected_threshold_pct": 14.0,
       "real_count_above_threshold": 5,
       "surrogate_count_histogram": {
-        "0": 62,
-        "1": 239,
-        "2": 341,
-        "3": 216,
-        "4": 99,
-        "5": 30,
-        "6": 11,
+        "1": 256,
+        "2": 358,
+        "3": 236,
+        "4": 105,
+        "5": 31,
+        "6": 12,
         "7": 1,
         "8": 1
       },
-      "surrogate_mean": 2.196,
-      "confidence_level": 0.957
+      "surrogate_mean": 2.342,
+      "confidence_level": 0.955
     },
     "INTC": {
       "label": "Intel",
@@ -246,10 +244,10 @@
       "auto_detected_threshold_pct": 33.0,
       "real_count_above_threshold": 2,
       "surrogate_count_histogram": {
-        "0": 966,
-        "1": 34
+        "0": 962,
+        "1": 38
       },
-      "surrogate_mean": 0.034,
+      "surrogate_mean": 0.038,
       "confidence_level": 1.0
     },
     "XOM": {
@@ -259,12 +257,11 @@
       "auto_detected_threshold_pct": 18.0,
       "real_count_above_threshold": 2,
       "surrogate_count_histogram": {
-        "0": 92,
-        "1": 883,
-        "2": 25
+        "1": 973,
+        "2": 27
       },
-      "surrogate_mean": 0.933,
-      "confidence_level": 0.975
+      "surrogate_mean": 1.027,
+      "confidence_level": 0.973
     },
     "WMT": {
       "label": "Wall Mart",
@@ -296,16 +293,15 @@
       "auto_detected_threshold_pct": 16.0,
       "real_count_above_threshold": 3,
       "surrogate_count_histogram": {
-        "0": 35,
-        "1": 199,
-        "2": 392,
-        "3": 234,
-        "4": 96,
+        "1": 209,
+        "2": 403,
+        "3": 242,
+        "4": 101,
         "5": 34,
-        "6": 10
+        "6": 11
       },
-      "surrogate_mean": 2.299,
-      "confidence_level": 0.626
+      "surrogate_mean": 2.381,
+      "confidence_level": 0.612
     },
     "T": {
       "label": "AT&T",
@@ -335,11 +331,11 @@
       "auto_detected_threshold_pct": 36.0,
       "real_count_above_threshold": 2,
       "surrogate_count_histogram": {
-        "0": 928,
-        "1": 71,
+        "0": 925,
+        "1": 74,
         "2": 1
       },
-      "surrogate_mean": 0.073,
+      "surrogate_mean": 0.076,
       "confidence_level": 0.999
     },
     "HPQ": {
@@ -349,21 +345,20 @@
       "auto_detected_threshold_pct": 17.0,
       "real_count_above_threshold": 7,
       "surrogate_count_histogram": {
-        "0": 43,
         "2": 19,
-        "3": 73,
-        "4": 147,
-        "5": 214,
-        "6": 175,
-        "7": 163,
-        "8": 87,
-        "9": 49,
-        "10": 19,
+        "3": 78,
+        "4": 155,
+        "5": 221,
+        "6": 182,
+        "7": 174,
+        "8": 88,
+        "9": 52,
+        "10": 20,
         "11": 10,
         "12": 1
       },
-      "surrogate_mean": 5.555,
-      "confidence_level": 0.671
+      "surrogate_mean": 5.801,
+      "confidence_level": 0.655
     },
     "MRK": {
       "label": "Merck",
@@ -372,16 +367,16 @@
       "auto_detected_threshold_pct": 15.0,
       "real_count_above_threshold": 4,
       "surrogate_count_histogram": {
-        "0": 249,
-        "1": 351,
-        "2": 232,
-        "3": 121,
-        "4": 37,
+        "0": 201,
+        "1": 373,
+        "2": 245,
+        "3": 132,
+        "4": 39,
         "5": 9,
         "6": 1
       },
-      "surrogate_mean": 1.377,
-      "confidence_level": 0.953
+      "surrogate_mean": 1.466,
+      "confidence_level": 0.951
     },
     "PFE": {
       "label": "Pfizer",
@@ -390,22 +385,21 @@
       "auto_detected_threshold_pct": 13.0,
       "real_count_above_threshold": 8,
       "surrogate_count_histogram": {
-        "0": 59,
-        "1": 1,
-        "2": 25,
-        "3": 74,
-        "4": 125,
-        "5": 189,
-        "6": 198,
-        "7": 147,
-        "8": 87,
-        "9": 64,
-        "10": 21,
+        "1": 2,
+        "2": 26,
+        "3": 79,
+        "4": 133,
+        "5": 203,
+        "6": 206,
+        "7": 155,
+        "8": 92,
+        "9": 69,
+        "10": 25,
         "11": 6,
         "12": 4
       },
-      "surrogate_mean": 5.531,
-      "confidence_level": 0.818
+      "surrogate_mean": 5.88,
+      "confidence_level": 0.804
     },
     "KO": {
       "label": "Coca Cola",
@@ -414,14 +408,13 @@
       "auto_detected_threshold_pct": 18.0,
       "real_count_above_threshold": 3,
       "surrogate_count_histogram": {
-        "0": 73,
-        "1": 626,
-        "2": 249,
-        "3": 44,
+        "1": 672,
+        "2": 275,
+        "3": 45,
         "4": 8
       },
-      "surrogate_mean": 1.288,
-      "confidence_level": 0.948
+      "surrogate_mean": 1.389,
+      "confidence_level": 0.947
     },
     "QCOM": {
       "label": "Qualcomm",
@@ -431,7 +424,16 @@
     "AMAT": {
       "label": "Applied Materials",
       "n_obs": 3917,
-      "error": "no outlier crossover detected"
+      "threshold_pct": 36.0,
+      "auto_detected_threshold_pct": 36.0,
+      "real_count_above_threshold": 2,
+      "surrogate_count_histogram": {
+        "0": 899,
+        "1": 98,
+        "2": 3
+      },
+      "surrogate_mean": 0.104,
+      "confidence_level": 0.997
     },
     "PG": {
       "label": "Procter & Gamble",
@@ -440,10 +442,10 @@
       "auto_detected_threshold_pct": 37.0,
       "real_count_above_threshold": 2,
       "surrogate_count_histogram": {
-        "0": 986,
-        "1": 14
+        "0": 985,
+        "1": 15
       },
-      "surrogate_mean": 0.014,
+      "surrogate_mean": 0.015,
       "confidence_level": 1.0
     },
     "GM": {
